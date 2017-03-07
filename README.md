@@ -3,7 +3,7 @@
 ## compile
 
 ~~~bash
-~ make build
+~ mkdir build
 ~ cd build
 ~ cmake ..
 ~ make

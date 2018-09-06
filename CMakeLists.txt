@@ -5,9 +5,10 @@ set(CMAKE_C_STANDARD 99)
 
 add_subdirectory(libbz)
 
-set(SOURCE_FILES bspatch.c bspatch.c)
+set(SOURCE_PATCH bspatch.c)
+set(SOURCE_DIFF bsdiff.c)
 
-#add_executable(bsdiff ${SOURCE_FILES})
-add_library(bsdiff SHARED ${SOURCE_FILES})
+add_library(bspatch STATIC ${SOURCE_PATCH} ${SOURCE_DIFF})
+#add_library(bspatch SHARED ${SOURCE_PATCH} ${SOURCE_DIFF})
 
-target_link_libraries(bsdiff bz)
+target_link_libraries(bspatch bz)
